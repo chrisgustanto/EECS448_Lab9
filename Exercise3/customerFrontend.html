@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Virtual Store</title>
+</head>
+<body>
+<!--
+    Lab info
+    -The form the user interacts with to make purchase choices, give a username and
+    password, and choose shipping options
+    -You will get to decide what your store sells, but you need to sell at least three
+    items of different prices
+    -You will need to offer 3 types of shipping (radio buttons are great for this):
+    ▪  Free 7 day
+    ▪  $50.00 over night
+    ▪  $5.00 three day
+    -Reset button
+    -Submit button
+    -HINT: to give JavasSript the ability to stop submission, use the event onsubmit
+-->
+    <script src="formChecker.js"></script>
+    <form name="form" action="customerBackend.php" onsubmit="return validate()" method="post">
+
+            Username: <input type="text" name="username" required><br>
+            Password: <input type="password" name="password" required><br>
+            <li>Items for sale:
+                <div>
+                    <input type="number" placeholder="Quantity" name="monitorQuant" id="monitor" value="mon">
+                    <label for="monitor">Dress shoes: $150</label>
+                </div>
+                <div>
+                    <input type="number" placeholder="Quantity" name="desktopQuant" id="desktop" value="desk">
+                    <label for="desktop">Blazer jacket: $80</label>
+                </div>
+                <div>
+                    <input type="number" placeholder="Quantity" name="keyboardQuant" id="keyboard" value="keyb">
+                    <label for="keyboard">Suit pants: $60</label>
+                </div>
+            </li>
+
+            <li>Shipping Method:
+                <div>
+                    <input type="radio" name="shipping" id="sevenDay" value="sevenDay">
+                    <label for="sevenDat">Free 7 day</label>
+                </div>
+                <div>
+                    <input type="radio" name="shipping" id="threeDay" value="threeDay">
+                    <label for="threeDay">$5.00 Three Day</label>
+                </div>
+                <div>
+                    <input type="radio" name="shipping" id="nextDay" value="nextDay">
+                    <label for="nextDay">$50.00 Over Night</label>
+                </div>
+            </li>
+
+
+        <input type="submit" value="submit">
+        <input type="reset" value="reset">
+    </form>
+
+</body>
+</html>

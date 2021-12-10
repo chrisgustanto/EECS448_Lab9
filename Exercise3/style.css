@@ -1,0 +1,14 @@
+*{
+    margin: auto;
+}
+table{
+    outline-color: black;
+}
+
+tbody{
+    background-color: aquamarine;
+
+}
+#purp{
+    background-color: #A097C8;
+}
